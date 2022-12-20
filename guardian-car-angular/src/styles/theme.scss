@@ -1,0 +1,72 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$md-primary: (
+    50 : #f8e4e7,
+    100 : #eebbc2,
+    200 : #e38e9a,
+    300 : #d76172,
+    400 : #cf3f53,
+    500 : #c61d35,
+    600 : #c01a30,
+    700 : #b91528,
+    800 : #b11122,
+    900 : #a40a16,
+    A100 : #ffd1d3,
+    A200 : #ff9ea3,
+    A400 : #ff6b73,
+    A700 : #ff515b,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-secondary: (
+    50 : #e4e6e7,
+    100 : #bbbfc4,
+    200 : #8e959d,
+    300 : #616b75,
+    400 : #3f4b58,
+    500 : #1d2b3a,
+    600 : #1a2634,
+    700 : #15202c,
+    800 : #111a25,
+    900 : #0a1018,
+    A100 : #5a9cff,
+    A200 : #277dff,
+    A400 : #0061f3,
+    A700 : #0057da,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$my-app-primary: mat-palette($md-primary, 500, 900, A100);
+$my-app-secondary: mat-palette($md-secondary, 500, 900, A100);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-secondary);
+@include angular-material-theme($my-app-theme);
