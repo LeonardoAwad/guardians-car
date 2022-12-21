@@ -1,8 +1,11 @@
+@import '../../../../styles/theme.scss';
+
 .car{
   border-radius: 25px;
   box-shadow: 0px 0px 2px 0px;
   max-width: max-content;
   margin: 1rem;
+  padding: 0.5rem;
   img{
     border-radius: 25px 25px 0 0;
     max-width: -webkit-fill-available;
@@ -11,5 +14,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .name{
+      color: $secondary;
+      font-weight: bold;
+    }
   }
 }

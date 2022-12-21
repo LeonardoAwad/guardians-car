@@ -1,9 +1,9 @@
 <div class="car">
-  <img src="../../../../assets/Carros/Imagem 15.png" />
+  <img [src]="srcReplace()" />
   <div class="informations">
-    <span>Nome</span>
-    <span>Type</span>
-    <span>Motor</span>
-    <span>Lugares</span>
+    <span class="name">{{ car.name }}</span>
+    <span>{{ car.type }}</span>
+    <span>Motor {{ car.engine }}</span>
+    <span>{{ car.size }} Lugares</span>
   </div>
 </div>
