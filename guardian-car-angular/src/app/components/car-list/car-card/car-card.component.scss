@@ -6,6 +6,8 @@
   max-width: max-content;
   margin: 1rem;
   padding: 0.5rem;
+  height: 100%;
+  max-height: -webkit-fill-available;
   img{
     border-radius: 25px 25px 0 0;
     max-width: -webkit-fill-available;
