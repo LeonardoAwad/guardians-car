@@ -1,4 +1,8 @@
 @import '~@angular/material/theming';
+
+$primary: #c61d35;
+$secondary: #1d2b3a;
+
 @include mat-core();
 $md-primary: (
     50 : #f8e4e7,

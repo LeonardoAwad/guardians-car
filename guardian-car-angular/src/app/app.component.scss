@@ -1,0 +1,23 @@
+::ng-deep  {
+  .mat-form-field-outline-start{
+    border-radius: 1.5rem 0 0 1.5rem !important;
+    min-width: 1.5rem !important;
+  }
+
+  .mat-form-field-outline-end {
+    border-radius: 0 1.5rem 1.5rem 0 !important;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline{
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.5rem;
+  }
+
+  .mat-raised-button{
+    border-radius: 1.5rem !important;
+  }
+}
