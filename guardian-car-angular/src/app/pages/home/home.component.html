@@ -1,5 +1,5 @@
-<section>
-  <section *ngIf="!filterActive; else filterOn">
+<section *ngIf="!filterActive; else filterOn">
+  <section>
     <div class="profile">
       <div></div>
       <img
@@ -10,7 +10,12 @@
     <div class="content">
       <div class="filter">
         <mat-form-field class="no-rounded" appearance="outline">
-          <input matInput type="text" placeholder="Buscar carro" />
+          <input
+            [formControl]="searchControl"
+            matInput
+            type="text"
+            placeholder="Buscar carro"
+          />
           <mat-icon matPrefix class="material-symbols-outlined"
             >search</mat-icon
           >
@@ -24,8 +29,25 @@
       <section class="reservations">
         <h4>Últimas reservas</h4>
         <div class="last-cars">
-          <app-car-card></app-car-card>
-          <app-car-card></app-car-card>
+          <app-car-list
+            [carList]="[
+              {
+                name: 'Ford Ká',
+                year: '2019',
+                type: 'Sedan Compacto',
+                engine: '1.0',
+                size: '5'
+              },
+              {
+                name: 'Versa',
+                year: '2019',
+                type: 'Sedan médio',
+                engine: '1.4',
+                size: '5'
+              }
+            ]"
+          >
+          </app-car-list>
         </div>
         <button class="qr-code" mat-raised-button color="accent">
           <mat-icon class="material-symbols-outlined">qr_code_scanner</mat-icon>
@@ -41,5 +63,5 @@
 </section>
 
 <ng-template #filterOn>
-  <app-filter></app-filter>
+  <app-filter (filterActive)="filterActive = $event"></app-filter>
 </ng-template>
