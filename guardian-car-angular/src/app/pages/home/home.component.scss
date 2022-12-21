@@ -1,0 +1,90 @@
+@import '../../../styles/theme.scss';
+
+.profile{
+  height: 30vh;
+  position: relative;
+  div{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #1d2b3ab8;
+    z-index: 1;
+  }
+  background-image: url(https://s.zst.com.br/cms-assets/2021/08/melhor-capa-para-carro.jpg);
+  background-position-x: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  h3, img{
+    z-index: 2;
+  }
+
+  span{
+    font-weight: bold;
+  }
+  img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 2px $primary;
+  }
+
+}
+
+.content{
+  margin: 1rem;
+  position: relative;
+  height: 53vh;
+
+  h4{
+    padding-top: 3rem;
+    margin: 1rem;
+    font-weight: bold;
+    color: $secondary;
+  }
+
+  .last-cars{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(100px, 1fr));
+  }
+
+  .qr-code{
+    padding: 1rem 2rem;
+    width: -webkit-fill-available;
+    margin: 1rem;
+  }
+
+  .filter{
+    position: absolute;
+    top: -3rem;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
+    mat-icon{
+      color: $primary;
+      font-size: 1.6rem;
+      vertical-align: text-bottom;
+    }
+
+    button{
+      border-radius: 0.5rem !important;
+      padding: 0.5rem 1rem;
+      top: -0.2rem;
+      margin-left: 1rem;
+
+    }
+  }
+
+  .reservations{
+    overflow-y: auto;
+    max-height: 50vh;
+  }
+}
+
+

@@ -1,0 +1,45 @@
+<section>
+  <section *ngIf="!filterActive; else filterOn">
+    <div class="profile">
+      <div></div>
+      <img
+        src="https://ef564920920608e03abb-7d34ef097b6ab6c586dfc84157128505.ssl.cf1.rackcdn.com/PostImagem/36734/foto-de-perfil-profissional_o1eh30s23km6j1lmm1k5r8cvinuj.JPG"
+      />
+      <h3>Olá, <span>Nome</span></h3>
+    </div>
+    <div class="content">
+      <div class="filter">
+        <mat-form-field class="no-rounded" appearance="outline">
+          <input matInput type="text" placeholder="Buscar carro" />
+          <mat-icon matPrefix class="material-symbols-outlined"
+            >search</mat-icon
+          >
+        </mat-form-field>
+
+        <button mat-raised-button (click)="filterActive = true">
+          <mat-icon class="material-symbols-outlined">filter_list</mat-icon>
+          Filtrar
+        </button>
+      </div>
+      <section class="reservations">
+        <h4>Últimas reservas</h4>
+        <div class="last-cars">
+          <app-car-card></app-car-card>
+          <app-car-card></app-car-card>
+        </div>
+        <button class="qr-code" mat-raised-button color="accent">
+          <mat-icon class="material-symbols-outlined">qr_code_scanner</mat-icon>
+          Acessar por <span>QR code</span>
+        </button>
+      </section>
+    </div>
+  </section>
+
+  <div>
+    <app-menu></app-menu>
+  </div>
+</section>
+
+<ng-template #filterOn>
+  <app-filter></app-filter>
+</ng-template>

@@ -1,0 +1,15 @@
+.car{
+  border-radius: 25px;
+  box-shadow: 0px 0px 2px 0px;
+  max-width: max-content;
+  margin: 1rem;
+  img{
+    border-radius: 25px 25px 0 0;
+    max-width: -webkit-fill-available;
+  }
+  .informations{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

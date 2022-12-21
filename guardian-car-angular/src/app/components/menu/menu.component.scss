@@ -1,0 +1,14 @@
+.menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  box-shadow: 1px 8px 20px 1px;
+  div{
+    text-align: center;
+  }
+}
