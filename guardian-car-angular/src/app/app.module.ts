@@ -1,25 +1,38 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { CarCardComponent } from './components/car-list/car-card/car-card.component';
+import { CarListComponent } from './components/car-list/car-list.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { FilterService } from './services/filter.service';
+import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MaterialModule } from './material.module';
-import { NgModule } from '@angular/core';
-import { HomeComponent } from './pages/home/home.component';
-import { CarListComponent } from './components/car-list/car-list.component';
-import { CarCardComponent } from './components/car-list/car-card/car-card.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { FilterComponent } from './components/filter/filter.component';
+import { NgModule } from '@angular/core';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, CarListComponent, CarCardComponent, MenuComponent, FilterComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    CarListComponent,
+    CarCardComponent,
+    MenuComponent,
+    FilterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [FilterService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

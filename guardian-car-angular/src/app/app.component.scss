@@ -1,30 +1,49 @@
+
 ::ng-deep  {
-  $radius: 1.5rem;
   mat-form-field:not(.no-rounded){
-    $radius: 0.5rem;
-    .mat-form-field-appearance-outline .mat-form-field-infix {
+    $radius: 1.5rem;
+    &.mat-form-field-appearance-outline .mat-form-field-infix {
       padding: 0.5rem;
     }
-  }
-
-  .mat-form-field-outline-start{
-    border-radius: $radius 0 0 $radius !important;
-    min-width: $radius !important;
-  }
-
-  .mat-form-field-outline-end {
-    border-radius: 0 $radius $radius 0 !important;
-  }
-
-  .mat-form-field-appearance-outline {
-    .mat-form-field-outline{
-      background-color: #ffffff;
-      border-radius: $radius;
-      box-shadow: 0px 0px 4px;
+    .mat-form-field-outline-start{
+      border-radius: $radius 0 0 $radius !important;
+      min-width: $radius !important;
     }
 
-    &:not(.no-rounded) .mat-form-field-outline{
-      box-shadow: 0px;
+    .mat-form-field-outline-end {
+      border-radius: 0 $radius $radius 0 !important;
+    }
+
+    &.mat-form-field-appearance-outline {
+      .mat-form-field-outline{
+        background-color: #ffffff;
+        border-radius: $radius;
+        box-shadow: 0px 0px 4px;
+      }
+
+      &:not(.no-rounded) .mat-form-field-outline{
+        box-shadow: 0px;
+      }
+    }
+  }
+
+  mat-form-field{
+    $radius: 0.5rem;
+    &.mat-form-field-outline-start{
+      border-radius: $radius 0 0 $radius !important;
+      min-width: $radius !important;
+    }
+
+    .mat-form-field-outline-end {
+      border-radius: 0 $radius $radius 0 !important;
+    }
+
+    &.mat-form-field-appearance-outline {
+      .mat-form-field-outline{
+        background-color: #ffffff;
+        border-radius: $radius;
+        box-shadow: 0px 0px 4px;
+      }
     }
   }
 
