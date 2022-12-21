@@ -1,0 +1,75 @@
+<section class="filter" *ngIf="filter$ | async as filter">
+  <div class="search">
+    <div class="cover" *ngIf="cover; else searchBar" (click)="cover = false">
+      <h2>
+        <mat-icon color="primary" matPrefix class="material-symbols-outlined"
+          >search</mat-icon
+        >
+        BUSCA
+      </h2>
+    </div>
+    <ng-template #searchBar>
+      <mat-form-field appearance="outline">
+        <input
+          [formControl]="searchControl"
+          matInput
+          type="text"
+          placeholder="Buscar carro"
+        />
+        <mat-icon color="primary" matPrefix class="material-symbols-outlined"
+          >search</mat-icon
+        >
+      </mat-form-field>
+    </ng-template>
+  </div>
+
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Tipos de carrocerias </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="grid-checkbox">
+      <mat-checkbox
+        color="primary"
+        *ngFor="let type of filter.coachwork; let typeIndex = index"
+        [checked]="type.selected"
+        (change)="type.selected = $event.checked"
+        >{{ type.value }}</mat-checkbox
+      >
+    </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Tipos de motores </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="engine">
+      <button
+        *ngFor="let engine of filter.engines"
+        mat-raised-button
+        (click)="engine.selected = !engine.selected"
+        [color]="engine.selected ? 'primary' : null"
+      >
+        Motor {{ engine.value }}
+      </button>
+    </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Quantidade de lugares </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="size">
+      <button
+        *ngFor="let size of filter.sizes"
+        mat-raised-button
+        (click)="size.selected = !size.selected"
+        [color]="size.selected ? 'primary' : null"
+      >
+        {{ size.value }}
+      </button>
+    </div>
+  </mat-expansion-panel>
+  <div class="apply-filter">
+    <button mat-raised-button (click)="applyFilter(filter)" color="accent">
+      APLICAR FILTRO
+    </button>
+  </div>
+</section>

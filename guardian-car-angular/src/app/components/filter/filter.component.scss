@@ -1,0 +1,90 @@
+@import '../../../styles/theme.scss';
+
+.app-filter{
+  .filter{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+  }
+
+  .search{
+    background-color: $secondary;
+    display: flex;
+    justify-content: center;
+    height: 18vh;
+    .cover{
+      mat-icon{
+        vertical-align: top;
+        font-size: 2rem;
+        padding-right: 0.5rem;
+      }
+      align-self: center;
+      color: white;
+    }
+    mat-form-field{
+      align-self: center;
+      display: flex;
+      padding-top: 1rem;
+    }
+  }
+
+  .grid-checkbox{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
+
+  .mat-expansion-indicator::after{
+    color: $primary;
+  }
+
+  mat-panel-title{
+    font-weight: bold;
+  }
+  mat-expansion-panel{
+    color: $secondary;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  mat-expansion-panel-header,
+  .mat-expansion-panel-header.mat-expanded:hover,
+  .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover{
+    background-color:#f8f6f6;
+  }
+
+  .engine, .size{
+    display: grid;
+    padding-top: 0.75rem;
+    gap: 0.5rem;
+    button{
+      border-radius: 0.5rem !important;
+    }
+  }
+
+  .engine{
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+  }
+
+  .size{
+    grid-template-columns: repeat(6, minmax(auto, 25px));
+    button{
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      min-width: 50px;
+    }
+  }
+
+  .apply-filter{
+    box-shadow: 1px 8px 20px 1px;
+    padding: 1rem 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    button{
+      width: 100%;
+    }
+  }
+}
+

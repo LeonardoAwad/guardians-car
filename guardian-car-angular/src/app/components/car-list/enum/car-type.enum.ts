@@ -1,0 +1,18 @@
+export enum CarTypeEnum {
+  utilitário = 'Utilitário',
+  utilitárioLeve = 'Utilitário leve',
+  minivan = 'Minivan',
+  picapeMedia = 'Picape média',
+  sedanCompacto = 'Sedan Compacto',
+  sedanMedio = 'Sedan médio',
+  sedanGrande = 'Sedan grande',
+  picapeLeveMedia = 'Picape leve-média',
+  picapeLeve = 'Picape leve',
+  coupe = 'Coupé',
+  Crossover = 'Crossover',
+  suvGrande = 'SUV Grande',
+  suvMedia = 'SUV Média',
+  suvCompacto = 'SUV Compacto',
+  hatchCompacto = 'Hatch Compacto',
+  hatchMedio = 'Hatch Médio',
+}
